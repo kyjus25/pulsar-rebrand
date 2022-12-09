@@ -32,17 +32,24 @@ const posts = await Astro.glob('../pages/blog/*.md');
                     <img src="/text-only-light.svg" class="h-10">
                 </div>
                 <ul>
-                    <li><a href="#" class="white">Test</a></li>
-                    <li><a href="#" class="white">Test</a></li>
-                    <li><a href="#" class="white">Test</a></li>
-                    <li><a href="#" class="white">Test</a></li>
-                    <li><a href="#" class="white">Test</a></li>
-                    <li><a href="#" class="white">Test</a></li>
-                    <li><a href="#" class="white">Test</a></li>
+                    {
+                        posts.filter(i => i.url !== '/blog').map(post => (
+                            <li><a href={post.url} class="white">{post.frontmatter.title}</a></li>
+                        ))
+                    }
                 </ul>
             </div>
             <div class="card">
-                
+                <h3>Categories</h3>
+                {posts.flatMap(i => i.frontmatter.category).filter(i => i).map(i => (
+                    <a href="#" class="white chip">{i}</a>
+                ))}
+            </div>
+            <div class="card">
+                <h3>Tags</h3>
+                {posts.flatMap(i => i.frontmatter.tag).filter(i => i).map(i => (
+                    <a href="#" class="white chip">{i}</a>
+                ))}
             </div>
         </aside>
     </article>
