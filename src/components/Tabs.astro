@@ -1,0 +1,10 @@
+---
+const { headers } = Astro.props
+---
+
+<div class="tabs">
+    <div>
+        {headers.map((header, index) => <span class={index === 0 ? 'active' : ''}>{header}</span> )}
+    </div>
+    <slot />
+</div>

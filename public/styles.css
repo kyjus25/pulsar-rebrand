@@ -136,6 +136,55 @@ a.card {
     @apply mt-0;
 }
 
+.card.info {
+    @apply bg-sky-500 border-l-4 border-l-sky-600;
+}
+
+.card.warning {
+    @apply bg-yellow-500 border-l-4 border-l-yellow-600;
+}
+
+.card.info *:not(h3):not(i),
+.card.warning *:not(h3):not(i) {
+    @apply !text-black;
+}
+
+/*************************/
+/******** TABS ***********/
+/*************************/
+
+.tabs {
+    @apply border border-neutral-700 rounded mt-6 cursor-pointer;
+}
+
+.tabs span {
+    @apply inline-block p-3 px-6 rounded-t-lg bg-neutral-600 ;
+}
+
+.tabs span.active {
+    @apply bg-neutral-900 font-bold;
+}
+
+.tabs div:first-of-type {
+    @apply bg-neutral-600 p-0;
+}
+
+.tabs div {
+    @apply p-3;
+}
+
+/*************************/
+/******* ACCORDION *******/
+/*************************/
+
+.accordion {
+    @apply mt-6;
+}
+
+.accordion + .accordion {
+    @apply mt-6;
+}
+
 /*************************/
 /******** CHIPS **********/
 /*************************/

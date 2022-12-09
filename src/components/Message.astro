@@ -1,0 +1,13 @@
+---
+const { severity, title } = Astro.props
+---
+
+<div class={`card ${severity}`}>
+    <h3>
+        {severity === 'info' && <i class="fas fa-circle-info" />}
+        {severity === 'warning' && <i class="fas fa-triangle-exclamation" />}
+        {severity === 'error' && <i class="fas fa-circle-xmark" />}
+        {title}
+    </h3>
+    <slot />
+</div>
