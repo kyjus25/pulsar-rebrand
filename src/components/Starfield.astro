@@ -57,11 +57,14 @@
   const canvas = document.querySelector(
     "#starfield-canvas"
   ) as HTMLCanvasElement;
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas?.getContext("2d");
 
   const container = document.querySelector("#starfield") as HTMLElement;
   const resizeObserver = new ResizeObserver(setup);
-  resizeObserver.observe(container);
+
+  if (ctx) {
+    resizeObserver.observe(container);
+  }
 
   function setup() {
     rafId > 0 && cancelAnimationFrame(rafId);

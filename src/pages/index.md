@@ -8,7 +8,9 @@ layout: ../layouts/Home.astro
 
 ## Batteries included, and replacable.
 
-[Download](/download) [Donate](/donate) [Join Our Community](/community)
+<a href="/download" class="button"><i class="fas fa-download"></i>Download Pulsar</a>
+<a href="/donate" class="button"><i class="fas fa-hand-holding-heart"></i>Donate to the Team</a>
+<a href="/community" class="button"><i class="fas fa-users"></i>Join Our Community</a>
 
 |       |  | |
 | ----------- | ----------- | ----------- |
@@ -26,7 +28,7 @@ We are still working on the editor to get to our first stable release. You can s
 
 We are looking to support distro repositories such as Debian/Ubuntu repos, Fedora, Snap, Flatpak, Arch/AUR etc. but we need to get to a good point with a stable release before we instigate that so for now the downloadable binaries are the main supported downloads.
 
-[Download Now](/download)
+<a href="/download" class="button"><i class="fas fa-download"></i>Download Pulsar</a>
 
 ## Screenshots
 

@@ -1,7 +1,5 @@
 ---
 title: Blog
 icon: fas fa-pencil
-layout: ../../layouts/Page.astro
+layout: ../../layouts/Blog.astro
 ---
-
-# Blog

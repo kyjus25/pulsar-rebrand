@@ -4,12 +4,16 @@ body {
     @apply bg-neutral-900 text-white font-roboto;
 }
 
+.page article {
+    @apply mt-24;
+}
+
 /*************************/
 /******* HEADINGS ********/
 /*************************/
 
-.page h1:first-of-type {
-    @apply mt-24;
+.page article h1 {
+    @apply mt-0;
 }
 
 h1 {
@@ -24,7 +28,7 @@ h3 {
     @apply my-6 font-bold leading-tight text-transparent text-3xl text-white;
 }
 
-article h1 {
+.home article h1 {
     @apply text-center;
 }
 
@@ -36,11 +40,19 @@ h2 + p {
 /***** ARTICLE LINKS *****/
 /*************************/
 
-article a {
+article a i {
+    @apply mr-3
+}
+
+article a:not(.button):not(.white) {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 transition-all opacity-100 hover:opacity-80;
+}
+
+article a.button {
     @apply inline-block font-bold text-xl p-3 rounded mt-6 bg-gradient-to-r from-purple-400 to-pink-600 transition-all opacity-100 hover:opacity-80;
 }
 
-article a + a {
+article a.button + a.button {
     @apply inline-block font-bold text-xl p-3 rounded mt-6 border bg-none ml-6;
 }
 
@@ -58,6 +70,10 @@ article a + a {
 
 .page nav i {
     @apply text-white/50;
+}
+
+nav ul ul {
+    @apply hidden;
 }
 
 nav li {
@@ -90,6 +106,34 @@ table td {
 
 table td::first-line {
     @apply text-4xl font-bold text-center block text-white leading-[3em];
+}
+
+/*************************/
+/******** LISTS **********/
+/*************************/
+
+article ul {
+    @apply block list-disc pl-6;
+}
+
+/*************************/
+/********* Card **********/
+/*************************/
+
+.card {
+    @apply bg-neutral-600 p-6 rounded;
+}
+
+a.card {
+    @apply transition-all opacity-100 hover:opacity-80
+}
+
+.card + .card {
+    @apply mt-12;
+}
+
+.card h3 {
+    @apply mt-0;
 }
 
 /*************************/

@@ -4,8 +4,8 @@ const { frontmatter } = Astro.props
 ---
 
 <Base {frontmatter}>
-    <div class="container mx-auto">
+    <article class="container mx-auto">
         <h1>{frontmatter.title}</h1>
         <slot />
-    </div>
+    </article>
 </Base>
