@@ -1,0 +1,9 @@
+---
+import Nav from "../util/Nav.astro";
+import GithubCorner from "./GithubCorner.astro";
+const posts = await Astro.glob('../pages/**/*.md');
+---
+<GithubCorner />
+<header class="absolute bottom-0 p-3">
+  <Nav {posts} />
+</header>

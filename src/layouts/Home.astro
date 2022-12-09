@@ -1,0 +1,20 @@
+---
+import Starfield from '../components/Starfield.astro';
+import Base from './Base.astro';
+const { frontmatter } = Astro.props
+---
+<Base {frontmatter}>
+    <Starfield />
+    <div id="hero" class="flex items-center gap-24 justify-center h-screen">
+        <div>
+            <img src="text-only-light.svg" class="w-64 mb-3">
+            <h1>A Community-led<br>Hyper-Hackable<br>Text Editor</h1>
+        </div>
+        <img src="logo-only-light.svg" class="w-52 animate-slide-slow	">
+    </div>
+    <article>
+        <div class="container mx-auto py-6">
+            <slot />
+        </div>
+    </article>
+</Base>
